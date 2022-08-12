@@ -3,7 +3,7 @@ import styled from "styled-components/native";
 export const SearchContainer = styled.View`
   flex-direction: row;
   align-items: baseline;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 `;
 
 export const SearchBarSection = styled.View`
