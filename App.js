@@ -13,6 +13,7 @@ import {
   OleoScriptSwashCaps_400Regular,
   OleoScriptSwashCaps_700Bold,
 } from "@expo-google-fonts/oleo-script-swash-caps";
+import { StreamApp } from "expo-activity-feed";
 import AppLoading from "expo-app-loading";
 
 import AppNavigator from "./src/infrastructure/navigation/app.navigator";
@@ -35,7 +36,13 @@ export default function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <AppNavigator />
+        <StreamApp
+          apiKey="k935mrhwrkfh"
+          appId="1152928"
+          token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoibmFtZWxlc3Mtc2t5LTkifQ.rbPi52y0fL4TN2oyYq5kR_YCbxJQEYRbfzXojflfoTA"
+        >
+          <AppNavigator />
+        </StreamApp>
       </ThemeProvider>
       <ExpoStatusBar style="auto" />
     </>
