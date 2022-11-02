@@ -7,14 +7,9 @@ import { Text } from "../../../components/text/text.component";
 
 import { Ionicons } from "@expo/vector-icons";
 import { Spacer } from "../../../components/spacer/spacer.component";
-import {
-  SearchBarSection,
-  SearchContainer,
-  SearchIconSection,
-  AdditionButton,
-} from "../../../components/search/search.styles";
+import { AdditionButton } from "../../../components/search/search.styles";
 import MenuItemComponent from "../../../components/menu-item/menu-item.component";
-
+import { FlatFeed } from "expo-activity-feed";
 import { FadeInView } from "../../../animations/fade.animation";
 import {
   TopBarContainer,
@@ -55,18 +50,15 @@ export default function HomeScreen({ navigation }) {
           />
         </IconContainer>
       </TopBarContainer>
-
       <DataList
         data={ProjectItems}
         renderItem={({ item }) => {
           return (
-            <TouchableOpacity
-              activeOpacity={0.4}
-              onPress={() => navigation.navigate("DetailsScreen")}
-            >
+            <TouchableOpacity activeOpacity={0.4}>
               <FadeInView>
                 <Spacer position="bottom" size="xsmall">
-                  <MenuItemComponent />
+                  {/* <MenuItemComponent /> */}
+                  <FlatFeed />
                 </Spacer>
               </FadeInView>
             </TouchableOpacity>

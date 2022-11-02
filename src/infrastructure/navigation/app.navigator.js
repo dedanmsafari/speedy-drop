@@ -5,6 +5,7 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import { View, Text } from "react-native";
 import { colors } from "../theme/colors";
 import { Ionicons } from "@expo/vector-icons";
+
 import HomeNavigator from "./home.navigator";
 
 const Tab = createMaterialBottomTabNavigator();
