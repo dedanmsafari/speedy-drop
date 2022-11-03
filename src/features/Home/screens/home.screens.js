@@ -50,14 +50,14 @@ export default function HomeScreen({ navigation }) {
           />
         </IconContainer>
       </TopBarContainer>
-      <DataList
+      <FlatFeed feedGroup="timeline" userId="dry-math-1" />
+      {/* <DataList
         data={ProjectItems}
         renderItem={({ item }) => {
           return (
             <TouchableOpacity activeOpacity={0.4}>
               <FadeInView>
                 <Spacer position="bottom" size="xsmall">
-                  {/* <MenuItemComponent /> */}
                   <FlatFeed />
                 </Spacer>
               </FadeInView>
@@ -65,7 +65,7 @@ export default function HomeScreen({ navigation }) {
           );
         }}
         key={(item) => item}
-      />
+      /> */}
       <AdditionButton>
         <IconButton icon="plus" size={25} color="white" />
       </AdditionButton>
