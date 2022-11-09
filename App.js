@@ -13,10 +13,11 @@ import {
   OleoScriptSwashCaps_400Regular,
   OleoScriptSwashCaps_700Bold,
 } from "@expo-google-fonts/oleo-script-swash-caps";
-import { StreamApp } from "expo-activity-feed";
+
 import AppLoading from "expo-app-loading";
 
 import AppNavigator from "./src/infrastructure/navigation/app.navigator";
+import { Navigation } from "./src/infrastructure/navigation";
 
 export default function App() {
   let [PoppinsLoaded] = usePoppins({
@@ -36,13 +37,7 @@ export default function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <StreamApp
-          apiKey="k935mrhwrkfh"
-          appId="1152928"
-          token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoibmFtZWxlc3Mtc2t5LTkifQ.rbPi52y0fL4TN2oyYq5kR_YCbxJQEYRbfzXojflfoTA"
-        >
-          <AppNavigator />
-        </StreamApp>
+        <Navigation />
       </ThemeProvider>
       <ExpoStatusBar style="auto" />
     </>
