@@ -1,6 +1,4 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { View, Text } from "react-native";
 import { colors } from "../theme/colors";
@@ -42,23 +40,21 @@ const SettingsScreen = () => {
 
 export default function AppNavigator() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-        screenOptions={createScreenOptions}
-        labeled={false}
-        activeColor={colors.brand.primary}
-        inactiveColor={colors.brand.muted}
-        barStyle={{
-          position: "absolute",
-          backgroundColor: colors.bg.primary,
-          borderTopWidth: 1,
-          borderTopColor: colors.ui.tertiary,
-        }}
-      >
-        <Tab.Screen name="Home" component={HomeNavigator} />
-        <Tab.Screen name="People" component={RecordsScreen} />
-        <Tab.Screen name="Profile" component={SettingsScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <Tab.Navigator
+      screenOptions={createScreenOptions}
+      labeled={false}
+      activeColor={colors.brand.primary}
+      inactiveColor={colors.brand.muted}
+      barStyle={{
+        position: "absolute",
+        backgroundColor: colors.bg.primary,
+        borderTopWidth: 1,
+        borderTopColor: colors.ui.tertiary,
+      }}
+    >
+      <Tab.Screen name="Home" component={HomeNavigator} />
+      <Tab.Screen name="People" component={RecordsScreen} />
+      <Tab.Screen name="Profile" component={SettingsScreen} />
+    </Tab.Navigator>
   );
 }
