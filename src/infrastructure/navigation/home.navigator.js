@@ -5,7 +5,6 @@ import {
   TransitionPresets,
   CardStyleInterpolators,
 } from "@react-navigation/stack";
-import HomeDetailsScreens from "../../features/Home/screens/homeDetails.screens";
 import HomeScreen from "../../features/Home/screens/home.screens";
 import { StyledSafeAreaView } from "../../utils/safeArea.util.component";
 import styled from "styled-components/native";
@@ -30,7 +29,6 @@ const HomeNavigator = () => {
           }}
         >
           <Stack.Screen name="HomeScreen" component={HomeScreen} />
-          <Stack.Screen name="DetailsScreen" component={HomeDetailsScreens} />
         </Stack.Navigator>
       </StyledSafeAreaView>
     </View>
