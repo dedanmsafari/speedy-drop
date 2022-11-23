@@ -1,0 +1,48 @@
+const FeedData = [
+  {
+    online: "true",
+    profilePic: require("../../../../../assets/smilingWoman.jpg"),
+    userName: "Clara M.",
+    time: "45min",
+    IconName: "location-sharp",
+    IconText: "local",
+    text: "StarPoint Hotel just started serving White Cakes,Its the best so far!",
+    postPic: require("../../../../../assets/restaurantpic.jpg"),
+    comments: "300 comments",
+  },
+  {
+    online: "true",
+    profilePic: require("../../../../../assets/smilingWoman.jpg"),
+    userName: "Clara M.",
+    time: "45min",
+    IconName: "location-sharp",
+    IconText: "local",
+    text: "StarPoint Hotel just started serving White Cakes,Its the best so far!",
+    postPic: require("../../../../../assets/restaurantpic.jpg"),
+    comments: "300 comments",
+  },
+  {
+    online: "true",
+    profilePic: require("../../../../../assets/smilingWoman.jpg"),
+    userName: "Clara M.",
+    time: "45min",
+    IconName: "location-sharp",
+    IconText: "local",
+    text: "StarPoint Hotel just started serving White Cakes,Its the best so far!",
+    postPic: require("../../../../../assets/restaurantpic.jpg"),
+    comments: "300 comments",
+  },
+  {
+    online: "true",
+    profilePic: require("../../../../../assets/smilingWoman.jpg"),
+    userName: "Clara M.",
+    time: "45min",
+    IconName: "location-sharp",
+    IconText: "local",
+    text: "StarPoint Hotel just started serving White Cakes,Its the best so far!",
+    postPic: require("../../../../../assets/restaurantpic.jpg"),
+    comments: "300 comments",
+  },
+];
+
+export default FeedData;
