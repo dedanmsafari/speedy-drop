@@ -7,17 +7,17 @@ import {
   Input,
   IconMenu,
 } from "./post.styles";
-import { Avatar } from "react-native-paper";
 import { Text } from "../../../../components/text/text.component";
 import { Ionicons, FontAwesome, MaterialIcons } from "@expo/vector-icons";
 import { Spacer } from "../../../../components/spacer/spacer.component";
+import AvatarIcon from "../../../../components/Avatar/avatar.component";
 
 const Post = () => {
   return (
     <PostContainer>
       <AvatarContainer>
-        <Avatar.Image
-          size={40}
+        <AvatarIcon
+          online={true}
           source={require("../../../../../assets/postPicture.png")}
         />
       </AvatarContainer>
