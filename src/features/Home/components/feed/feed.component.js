@@ -50,7 +50,7 @@ const Feed = ({
         <TextContainer>
           <Text>{text}</Text>
         </TextContainer>
-        <Photo source={postPic} />
+        {postPic ? <Photo source={postPic} /> : null}
         <Feedback>
           <Like>
             <Fontisto name="like" size={20} color={colors.brand.primary} />
