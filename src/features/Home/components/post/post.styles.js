@@ -14,8 +14,6 @@ export const AvatarContainer = styled.View`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
-  padding: 6px 0px;
 `;
 
 export const PostContent = styled.View`
