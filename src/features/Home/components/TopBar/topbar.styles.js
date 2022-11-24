@@ -10,12 +10,14 @@ export const TopBarContainer = styled.View`
 `;
 export const IconContainer = styled.View`
   flex-direction: row;
-  justify-content: flex-end;
-  padding-right: 8px;
+  padding-right: 15px;
 `;
 
 export const LogoButtonHome = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
   padding-left: 12px;
+`;
+export const IconButton = styled.TouchableOpacity`
+  padding-left: 15px;
 `;
