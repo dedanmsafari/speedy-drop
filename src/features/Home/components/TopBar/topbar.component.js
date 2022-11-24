@@ -4,8 +4,8 @@ import {
   TopBarContainer,
   LogoButtonHome,
   IconContainer,
+  IconButton,
 } from "./topbar.styles";
-import { IconButton } from "react-native-paper";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../../../../infrastructure/theme/colors";
 
@@ -20,17 +20,23 @@ const TopBar = () => {
         <Ionicons name="chevron-down-outline" size={20} color="black" />
       </LogoButtonHome>
       <IconContainer>
-        <IconButton icon="magnify" size={20} color={colors.brand.primary} />
-        <IconButton
-          icon="bell-outline"
-          size={20}
-          color={colors.brand.primary}
-        />
-        <IconButton
-          icon="message-reply-outline"
-          size={20}
-          color={colors.brand.primary}
-        />
+        <IconButton>
+          <Ionicons name="search" size={20} color={colors.brand.primary} />
+        </IconButton>
+        <IconButton>
+          <Ionicons
+            name="notifications-outline"
+            size={20}
+            color={colors.brand.primary}
+          />
+        </IconButton>
+        <IconButton>
+          <Ionicons
+            name="ios-chatbubble-ellipses-outline"
+            size={20}
+            color={colors.brand.primary}
+          />
+        </IconButton>
       </IconContainer>
     </TopBarContainer>
   );
