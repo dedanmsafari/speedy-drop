@@ -24,7 +24,7 @@ export const TextContainer = styled.View`
 `;
 export const Photo = styled.Image`
   width: 100%;
-  height: 300px;
+  height: 270px;
 `;
 
 export const Feedback = styled.View`
@@ -32,6 +32,8 @@ export const Feedback = styled.View`
   align-items: center;
   justify-content: space-between;
   padding: 10px 15px;
+  border-top-width: 1px;
+  border-top-color: ${({ theme }) => theme.colors.ui.tertiary};
 `;
 export const Like = styled.View`
   flex-direction: row;
