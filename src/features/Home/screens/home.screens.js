@@ -24,7 +24,7 @@ export default function HomeScreen({ navigation }) {
         <Post />
         <Interests />
         {FeedData.map((feedData) => (
-          <FadeInView>
+          <FadeInView key={feedData.userName}>
             <Spacer position="bottom" size="xsmall">
               <Feed feed={feedData} />
             </Spacer>

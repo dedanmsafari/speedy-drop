@@ -46,8 +46,9 @@ export default function AppNavigator() {
       activeColor={colors.brand.primary}
       inactiveColor={colors.brand.muted}
       barStyle={{
-        position: "absolute",
+        position: "relative",
         backgroundColor: colors.bg.primary,
+
         borderTopWidth: 1,
         borderTopColor: colors.ui.tertiary,
       }}
