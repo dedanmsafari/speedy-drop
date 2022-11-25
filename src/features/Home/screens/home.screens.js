@@ -1,11 +1,11 @@
-import { FlatList, View, ScrollView } from "react-native";
+import { View, ScrollView } from "react-native";
 
 import React from "react";
 
 import { FadeInView } from "../../../animations/fade.animation";
 import FeedData from "../components/feed/data";
 import Post from "../components/post/post.component";
-import styled from "styled-components/native";
+
 import { colors } from "../../../infrastructure/theme/colors";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import Interests from "../components/interests/interests.component";
