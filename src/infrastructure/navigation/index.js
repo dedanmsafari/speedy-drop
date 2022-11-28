@@ -4,10 +4,10 @@ import AppNavigator from "./app.navigator";
 // import { AuthenticationContext } from "../../services/authentication/authentication.context";
 import { NavigationContainer } from "@react-navigation/native";
 
-export const Navigation = () => {
+export const Navigation = ({ onReady }) => {
   // const { isAuthenticated } = useContext(AuthenticationContext);
   return (
-    <NavigationContainer>
+    <NavigationContainer onReady={onReady}>
       {/* {isAuthenticated ? <AppNavigator /> : <AccountNavigator />} */}
       <AppNavigator />
     </NavigationContainer>
