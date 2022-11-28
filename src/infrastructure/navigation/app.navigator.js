@@ -9,9 +9,10 @@ import HomeNavigator from "./home.navigator";
 const Tab = createMaterialBottomTabNavigator();
 
 const TAB_ICON = {
-  Home: "home",
-  People: "md-people",
-  Profile: "person-sharp",
+  Form: "md-document-text",
+  Entries: "file-tray-stacked-sharp",
+  API: "server",
+  Messaging: "ios-mail",
 };
 
 const createScreenOptions = ({ route }) => {
@@ -42,20 +43,19 @@ export default function AppNavigator() {
   return (
     <Tab.Navigator
       screenOptions={createScreenOptions}
-      labeled={false}
       activeColor={colors.brand.primary}
       inactiveColor={colors.brand.muted}
       barStyle={{
         position: "relative",
         backgroundColor: colors.bg.primary,
-
         borderTopWidth: 1,
         borderTopColor: colors.ui.tertiary,
       }}
     >
-      <Tab.Screen name="Home" component={HomeNavigator} />
-      <Tab.Screen name="People" component={SocialScreen} />
-      <Tab.Screen name="Profile" component={SettingsScreen} />
+      <Tab.Screen name="Form" component={HomeNavigator} />
+      <Tab.Screen name="Entries" component={SocialScreen} />
+      <Tab.Screen name="API" component={SettingsScreen} />
+      <Tab.Screen name="Messaging" component={RecordsScreen} />
     </Tab.Navigator>
   );
 }
