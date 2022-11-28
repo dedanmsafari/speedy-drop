@@ -1,4 +1,6 @@
 import "react-native-gesture-handler";
+import React, { useCallback, useContext, useState, useEffect } from "react";
+import * as SplashScreen from "expo-splash-screen";
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./src/infrastructure/theme";
@@ -19,6 +21,8 @@ import AppLoading from "expo-app-loading";
 import AppNavigator from "./src/infrastructure/navigation/app.navigator";
 import { Navigation } from "./src/infrastructure/navigation";
 
+SplashScreen.preventAutoHideAsync();
+
 export default function App() {
   let [PoppinsLoaded] = usePoppins({
     Poppins_300Light,
@@ -31,13 +35,27 @@ export default function App() {
     OleoScriptSwashCaps_700Bold,
   });
 
+  useEffect(() => {
+    async function prepare() {
+      await SplashScreen.preventAutoHideAsync();
+    }
+    prepare();
+  }, []);
+
+  const onLayoutRootView = useCallback(async () => {
+    if (PoppinsLoaded && OleoScriptSwashCapsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+  }, [PoppinsLoaded, OleoScriptSwashCapsLoaded]);
+
   if (!PoppinsLoaded || !OleoScriptSwashCapsLoaded) {
-    return <AppLoading />;
+    return null;
   }
+
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Navigation />
+        <Navigation onReady={onLayoutRootView} />
       </ThemeProvider>
       <ExpoStatusBar style="auto" />
     </>
