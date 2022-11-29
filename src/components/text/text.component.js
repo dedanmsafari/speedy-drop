@@ -14,17 +14,17 @@ const body = (theme) => `
  `;
 
 const hint = (theme) => `
- font-size: ${theme.fontSizes.caption}
+ font-size: ${theme.fontSizes.button}
  font-family:${theme.fonts.light}
  font-weight:${theme.fontWeights.light}
 
  `;
 
-const success = (theme) => `
+const error = (theme) => `
  font-family:${theme.fonts.specialBold}
- font-size: ${theme.fontSizes.title}
+ font-size: ${theme.fontSizes.button}
  font-weight:${theme.fontWeights.bold}
- color: ${theme.colors.ui.success}
+ color: ${theme.colors.ui.error}
  `;
 
 const title = (theme) => `
@@ -52,7 +52,7 @@ const variants = {
   hint,
   title,
   caption,
-  success,
+  error,
   label,
 };
 
