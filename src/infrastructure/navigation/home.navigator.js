@@ -7,6 +7,7 @@ import {
 } from "@react-navigation/stack";
 import HomeScreen from "../../features/Home/screens/home.screens";
 import { StyledSafeAreaView } from "../../utils/safeArea.util.component";
+import { colors } from "../theme/colors";
 import styled from "styled-components/native";
 const Stack = createStackNavigator();
 
