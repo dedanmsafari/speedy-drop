@@ -3,7 +3,7 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import { View, Text } from "react-native";
 import { colors } from "../theme/colors";
 import { Ionicons } from "@expo/vector-icons";
-import SocialScreen from "../../features/Socials/screens/social.screens";
+import EntriesScreen from "../../features/Entries/screens/entries.screens";
 import HomeNavigator from "./home.navigator";
 
 const Tab = createMaterialBottomTabNavigator();
@@ -53,7 +53,7 @@ export default function AppNavigator() {
       }}
     >
       <Tab.Screen name="Form" component={HomeNavigator} />
-      <Tab.Screen name="Entries" component={SocialScreen} />
+      <Tab.Screen name="Entries" component={EntriesScreen} />
       <Tab.Screen name="API" component={SettingsScreen} />
       <Tab.Screen name="Messaging" component={RecordsScreen} />
     </Tab.Navigator>
