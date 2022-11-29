@@ -17,7 +17,7 @@ import {
 } from "@expo-google-fonts/oleo-script-swash-caps";
 
 import AppLoading from "expo-app-loading";
-
+import { getCompanies } from "./src/utils/firebase/firebase.utils";
 import AppNavigator from "./src/infrastructure/navigation/app.navigator";
 import { Navigation } from "./src/infrastructure/navigation";
 
