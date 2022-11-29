@@ -5,6 +5,8 @@ import { colors } from "../theme/colors";
 import { Ionicons } from "@expo/vector-icons";
 import EntriesScreen from "../../features/Entries/screens/entries.screens";
 import HomeNavigator from "./home.navigator";
+import ApiScreen from "../../features/API/screens/api.screens";
+import MessagingScreen from "../../features/Messaging/screens/messaging.screens";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -24,21 +26,6 @@ const createScreenOptions = ({ route }) => {
   };
 };
 
-const RecordsScreen = () => {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Records Screen</Text>
-    </View>
-  );
-};
-const SettingsScreen = () => {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Profile Screen</Text>
-    </View>
-  );
-};
-
 export default function AppNavigator() {
   return (
     <Tab.Navigator
@@ -54,8 +41,8 @@ export default function AppNavigator() {
     >
       <Tab.Screen name="Form" component={HomeNavigator} />
       <Tab.Screen name="Entries" component={EntriesScreen} />
-      <Tab.Screen name="API" component={SettingsScreen} />
-      <Tab.Screen name="Messaging" component={RecordsScreen} />
+      <Tab.Screen name="API" component={ApiScreen} />
+      <Tab.Screen name="Messaging" component={MessagingScreen} />
     </Tab.Navigator>
   );
 }
