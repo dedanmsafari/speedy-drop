@@ -4,7 +4,8 @@ import { colors } from "../../../infrastructure/theme/colors";
 export const HomeContainer = styled.View`
   flex: 1;
   background-color: ${colors.bg.primary};
-  padding: 20px 10px 0px 10px; ;
+  padding: 20px 10px 0px 10px;
+  align-items: center;
 `;
 
 export const SortContainer = styled.View`
@@ -23,7 +24,7 @@ export const CardContainer = styled.View`
   background-color: ${colors.bg.secondary};
   padding: 5px 8px;
   border-radius: 10px;
-  elevation: 5px;
+  elevation: 5;
 `;
 export const CompanyName = styled.View`
   align-items: center;
