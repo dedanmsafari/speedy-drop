@@ -30,14 +30,14 @@ const EntriesScreen = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   async function getData() {
+    setIsLoading(true);
     const companyData = await getCompanies();
     setData(companyData);
+    setIsLoading(false);
   }
 
   useEffect(() => {
-    setIsLoading(true);
     getData();
-    setIsLoading(false);
   }, []);
 
   const onRefresh = React.useCallback(() => {
@@ -77,7 +77,7 @@ const EntriesScreen = () => {
           <Spacer position="bottom" size="medium" />
           <FeedList
             ListFooterComponent={renderLoader}
-            onEndReached={renderLoader}
+            onEndReached={getData}
             onEndReachedThreshold={0}
             showsVerticalScrollIndicator={false}
             refreshControl={
