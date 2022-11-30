@@ -44,7 +44,7 @@ const EntriesScreen = () => {
     setRefreshing(true);
     getData();
     setRefreshing(false);
-  }, [data]);
+  }, []);
 
   const FeedList = styled(FlatList).attrs({
     contentContainerStyle: { padding: 0 },
