@@ -36,24 +36,15 @@ const EntriesScreen = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    async function getData() {
-      const companyData = await getCompanies();
-      setData(companyData);
-    }
-
     getData();
     setIsLoading(false);
   }, []);
 
   const onRefresh = React.useCallback(() => {
-    async function getData() {
-      const companyData = await getCompanies();
-      setData(companyData);
-    }
     setRefreshing(true);
     getData();
     setRefreshing(false);
-  }, []);
+  }, [data]);
 
   const FeedList = styled(FlatList).attrs({
     contentContainerStyle: { padding: 0 },
@@ -86,7 +77,7 @@ const EntriesScreen = () => {
           <Spacer position="bottom" size="medium" />
           <FeedList
             ListFooterComponent={renderLoader}
-            onEndReached={getData}
+            onEndReached={renderLoader}
             onEndReachedThreshold={0}
             showsVerticalScrollIndicator={false}
             refreshControl={
