@@ -36,8 +36,8 @@ const ApiScreen = () => {
           <Spacer position="bottom" size="small" />
           <ScrollView>
             {posts.map(({ title, body, id }) => (
-              <>
-                <Card key={id} mode="outlined">
+              <React.Fragment key={id}>
+                <Card mode="outlined">
                   <Card.Content>
                     <Title>{title}</Title>
                     <Paragraph>{body}</Paragraph>
@@ -50,7 +50,7 @@ const ApiScreen = () => {
                   </Card.Actions>
                 </Card>
                 <Spacer position="bottom" size="large" />
-              </>
+              </React.Fragment>
             ))}
           </ScrollView>
         </HomeContainer>
